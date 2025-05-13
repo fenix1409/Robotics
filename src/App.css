@@ -1,20 +1,36 @@
 @import "tailwindcss";
 
-.container{
+.container {
     padding: 0 100px;
 }
-body{
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+body {
     background-color: black;
 }
-.hero{
+
+.hero {
     background-image: url('./assets/images/hero-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 86vh;
 }
-@media (max-width: 500px){
-    .container{
-        padding: 0 20px;
+
+@media (max-width: 500px) {
+    .hero {
+        height: 30vh;
     }
+}
+
+.course{
+    background-image: url('./assets/images/course-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

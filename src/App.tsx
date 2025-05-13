@@ -1,5 +1,6 @@
 import './App.css'
 import About from './sections/About'
+import Course from './sections/Course'
 import Description from './sections/Description'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <About />
       <Description />
+      <Course />
     </main>
   )
 }
