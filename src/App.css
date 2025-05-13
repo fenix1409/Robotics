@@ -3,3 +3,18 @@
 .container{
     padding: 0 100px;
 }
+body{
+    background-color: black;
+}
+.hero{
+    background-image: url('./assets/images/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 86vh;
+}
+@media (max-width: 500px){
+    .container{
+        padding: 0 20px;
+    }
+}

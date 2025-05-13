@@ -44,20 +44,10 @@ const Header = () => {
                     </button>
                 </div>
                 <div className="flex items-center gap-2">
-                        <button 
-                            className={`text-[24px] leading-[100%] ${language === 'RU' ? 'text-[#FFE000]' : 'text-white'}`}
-                            onClick={() => setLanguage('RU')}
-                        >
-                            RU
-                        </button>
-                        <span className="text-[#FFE000]">|</span>
-                        <button 
-                            className={`text-[24px] leading-[100%] ${language === 'UZ' ? 'text-[#FFE000]' : 'text-white'}`}
-                            onClick={() => setLanguage('UZ')}
-                        >
-                            UZ
-                        </button>
-                    </div>
+                    <button className={`text-[24px] leading-[100%] ${language === 'RU' ? 'text-[#FFE000]' : 'text-white'}`} onClick={() => setLanguage('RU')}>RU</button>
+                    <span className="text-[#FFE000]">|</span>
+                    <button className={`text-[24px] leading-[100%] ${language === 'UZ' ? 'text-[#FFE000]' : 'text-white'}`} onClick={() => setLanguage('UZ')}>UZ</button>
+                </div>
             </div>
         </header>
     )
