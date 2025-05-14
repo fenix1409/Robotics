@@ -28,6 +28,14 @@ const Course = () => {
                     </div>
                 ))}
             </div>
+            <div className='max-sm:py-[30px]'>
+                <h2 className='text-[23px] leading-[32px] font-bold text-[#F0D625] mb-[20px] max-sm:mb-[30px] max-sm:text-center'>отзывы</h2>
+                <div className='flex items-center gap-[45px] max-sm:justify-start max-sm:overflow-x-auto max-sm:px-4 max-sm:py-2 max-sm:gap-[15px]'>
+                    {Array(5).fill(null).map((_, index) => (
+                        <video key={index} src="your_video_source_here" width={220} height={310} className='!w-[220px] !h-[310px]' controls />
+                    ))}
+                </div>
+            </div>
         </section>
     )
 }
