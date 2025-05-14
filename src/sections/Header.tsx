@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import Logo from '../../public/logo.svg'
+import HeaderModal from '../components/HeaderModal'
+import { HamburgerBtn } from '../assets/Icons'
 
 const Header = () => {
     const [language, setLanguage] = useState('RU')
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
     const list = [
         { id: 1, title: "Главная", path: "#" },
         { id: 2, title: "О нас", path: "#" },
@@ -45,10 +48,14 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-2">
                     <button className={`text-[21px] leading-[100%] cursor-pointer w-[84px] ${language === 'RU' ? 'bg-[#FFE000] rounded-[14px] py-[12px] px-[28px] text-white' : 'text-white'}`} onClick={() => setLanguage('RU')}>RU</button>
-                    {/* <span className="text-[#FFE000]">|</span> */}
                     <button className={`text-[21px] leading-[100%] cursor-pointer w-[84px] ${language === 'UZ' ? 'bg-[#FFE000] rounded-[14px] py-[12px] px-[28px] text-white' : 'text-white'}`} onClick={() => setLanguage('UZ')}>UZ</button>
+                    <button className='max-sm:block' onClick={() => setIsMenuOpen(true)}><HamburgerBtn /></button>
                 </div>
             </div>
+            <HeaderModal
+                isOpen={isMenuOpen}
+                onClose={() => setIsMenuOpen(false)}
+            />
         </header>
     )
 }
