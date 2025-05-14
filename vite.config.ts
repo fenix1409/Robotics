@@ -9,7 +9,6 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      // Google Apps Script uchun proxy
       '/api': {
         target: 'https://script.google.com',
         changeOrigin: true,

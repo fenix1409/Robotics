@@ -44,9 +44,9 @@ const Header = () => {
                     </button>
                 </div>
                 <div className="flex items-center gap-2">
-                    <button className={`text-[24px] leading-[100%] ${language === 'RU' ? 'text-[#FFE000]' : 'text-white'}`} onClick={() => setLanguage('RU')}>RU</button>
-                    <span className="text-[#FFE000]">|</span>
-                    <button className={`text-[24px] leading-[100%] ${language === 'UZ' ? 'text-[#FFE000]' : 'text-white'}`} onClick={() => setLanguage('UZ')}>UZ</button>
+                    <button className={`text-[21px] leading-[100%] cursor-pointer w-[84px] ${language === 'RU' ? 'bg-[#FFE000] rounded-[14px] py-[12px] px-[28px] text-white' : 'text-white'}`} onClick={() => setLanguage('RU')}>RU</button>
+                    {/* <span className="text-[#FFE000]">|</span> */}
+                    <button className={`text-[21px] leading-[100%] cursor-pointer w-[84px] ${language === 'UZ' ? 'bg-[#FFE000] rounded-[14px] py-[12px] px-[28px] text-white' : 'text-white'}`} onClick={() => setLanguage('UZ')}>UZ</button>
                 </div>
             </div>
         </header>

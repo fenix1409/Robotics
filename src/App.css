@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+.tektur-default {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 @import "tailwindcss";
 
 .container {
@@ -12,6 +23,7 @@
 
 body {
     background-color: black;
+    font-family: Tektur, sans-serif;
 }
 
 .hero {
@@ -26,9 +38,12 @@ body {
     .hero {
         height: 30vh;
     }
+    .course{
+        padding: 30px 0;
+    }
 }
 
-.course{
+.course {
     background-image: url('./assets/images/course-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
