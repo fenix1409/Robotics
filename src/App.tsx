@@ -9,7 +9,7 @@ import Hero from './sections/Hero'
 
 function App() {
   return (
-    <main>
+    <main className='overflow-hidden'>
       <Header />
       <Hero />
       <About />
