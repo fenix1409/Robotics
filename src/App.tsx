@@ -6,6 +6,7 @@ import Footer from './sections/Footer'
 import GetCourse from './sections/GetCourse'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
+import './i18n'
 
 function App() {
   return (
