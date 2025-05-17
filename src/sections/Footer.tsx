@@ -1,13 +1,15 @@
+import { useTranslation } from "react-i18next"
 import { Instagram, Logo, Telegram, YouTube } from "../assets/Icons"
 
 const Footer = () => {
+    const { t } = useTranslation()
     const webs = [
         { id: 1, icon: <Telegram />, link: "https://t.me/Bobur_Oripov" },
         { id: 2, icon: <YouTube />, link: "https://www.youtube.com/" },
         { id: 3, icon: <Instagram />, link: "https://www.instagram.com/" }
     ]
     const courses = [
-        { id: 1, title: "Работотехника" },
+        { id: 1, title: "Робототехника" },
         { id: 2, title: "Английский для взрослых" },
         { id: 3, title: "Английский для детей" },
         { id: 4, title: "Шахмат" },
@@ -33,15 +35,15 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="space-y-[10px] flex items-start flex-col">
-                    <span className="text-[26px] leading-[100%] font-bold">Курсы</span>
+                    <span className="text-[26px] leading-[100%] font-bold">{t('Курсы')}</span>
                     {courses.map(item => (
-                        <strong className="text-[20px] leading-[100%]" key={item.id}>{item.title}</strong>
+                        <strong className="text-[20px] leading-[100%]" key={item.id}>{t(item.title)}</strong>
                     ))}
                 </div>
                 <div className="space-y-[10px] flex items-start flex-col">
-                    <span className="text-[26px] leading-[100%] font-bold">Контакты</span>
+                    <span className="text-[26px] leading-[100%] font-bold">{t('Контакты')}</span>
                     {contacts.map(item => (
-                        <a href={item.link} className="text-[20px] leading-[100%]" key={item.id}>{item.title}</a>
+                        <a href={item.link} className="text-[20px] leading-[100%]" key={item.id}>{t(item.title)}</a>
                     ))}
                 </div>
             </div>

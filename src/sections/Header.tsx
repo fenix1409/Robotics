@@ -51,21 +51,21 @@ const Header = () => {
                 <div className="flex items-center gap-2">
                     <div className="flex gap-2 bg-black p-1 rounded-[10px] border border-[#FFE000]">
                         <button
-                            className={`w-[60px] h-[36px] text-[21px] leading-[100%] font-medium rounded-[10px] transition-all duration-200 ${language === 'RU' ? 'bg-[#FFE000] text-black' : 'bg-transparent text-[#FFE000]'}`}
+                            className={`cursor-pointer w-[60px] h-[36px] text-[21px] leading-[100%] font-medium rounded-[10px] transition-all duration-200 ${language === 'RU' ? 'bg-[#FFE000] text-black' : 'bg-transparent text-[#FFE000]'}`}
                             onClick={() => {
                                 setLanguage('RU')
                                 i18n.changeLanguage('ru')
                                 localStorage.setItem('lang', 'ru')
                             }}>RU</button>
                         <button
-                            className={`w-[60px] h-[36px] text-[21px] leading-[100%] font-medium rounded-[10px] transition-all duration-200 ${language === 'UZ' ? 'bg-[#FFE000] text-black' : 'bg-transparent text-[#FFE000]'}`}
+                            className={`cursor-pointer w-[60px] h-[36px] text-[21px] leading-[100%] font-medium rounded-[10px] transition-all duration-200 ${language === 'UZ' ? 'bg-[#FFE000] text-black' : 'bg-transparent text-[#FFE000]'}`}
                             onClick={() => {
                                 setLanguage('UZ')
                                 i18n.changeLanguage('uz')
                                 localStorage.setItem('lang', 'uz')
                             }}>UZ</button>
                     </div>
-                    <button className='max-sm:block' onClick={() => setIsMenuOpen(true)}>
+                    <button className='sm:hidden cursor-pointer' onClick={() => setIsMenuOpen(true)}>
                         <HamburgerBtn />
                     </button>
                 </div>
